@@ -1,3 +1,7 @@
+layout: page
+title: "Software"
+permalink: /tech/software/
+
 # Software I use on my Mac
 
 ## Zettlr
