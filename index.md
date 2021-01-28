@@ -1,6 +1,7 @@
 ---
 title: "Emil Hørlyck's blog"
 author: Emil Hørlyck
+layout: home
 ---
 
 
