@@ -1,6 +1,6 @@
 ---
-layout: page
 menus: header
+layout: default
 title: "Emil Hørlyck's blog"
 author: Emil Hørlyck
 permalink: /
