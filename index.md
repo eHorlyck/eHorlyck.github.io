@@ -12,7 +12,8 @@ author: Emil Hørlyck
 ### Tech stack
 
 ![code](https://media4.giphy.com/media/HUplkVCPY7jTW/giphy.gif?cid=ecf05e4774d5hu3ss2rcj6atftk07l40rr46j720t2qe33iy&rid=giphy.gif)
-These pages described tech I use
+
+This pages described tech I use
 
 [Software](Software.md) and [Hardware](Hardware.md)
 
