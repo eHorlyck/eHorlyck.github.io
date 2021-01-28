@@ -1,3 +1,11 @@
+---
+layout: page
+menus: header
+title: "Emil Hørlyck's blog"
+author: Emil Hørlyck
+permalink: /
+---
+
 
 # Emil Hørlyck's Blog
 ## This is my Blog, There are many like it but this one is mine.

@@ -1,5 +1,6 @@
 ---
 layout: page
+menus: header
 title: "Software"
 author: Emil Hørlyck
 permalink: /tech/software/
