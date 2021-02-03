@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How I am hosting my Ghost blog on GitHub Pages</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=a146846412">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
+
+    <script>
+        if (localStorage.getItem('alto_dark') == 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+    <link rel="canonical" href="https://eHorlyck.github.io/host-ghost-blog-on-github-pages/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://eHorlyck.github.io/host-ghost-blog-on-github-pages/amp/" />
+    
+    <meta property="og:site_name" content="Emil Hørlyck&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How I am hosting my Ghost blog on GitHub Pages" />
+    <meta property="og:description" content="This post is only a modification of the guide written by Bassel Cheaib here Generating the static siteIn order to generate the static site, we&#x27;ll use the Ghost static site generator. With macOS, this tool can be used directly. 1. Install the tool globallyYou can do that by running: sudo" />
+    <meta property="og:url" content="https://eHorlyck.github.io/host-ghost-blog-on-github-pages/" />
+    <meta property="og:image" content="https://eHorlyck.github.io/content/images/2021/02/10137.jpeg" />
+    <meta property="article:published_time" content="2021-02-03T11:23:29.000Z" />
+    <meta property="article:modified_time" content="2021-02-03T12:18:20.000Z" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How I am hosting my Ghost blog on GitHub Pages" />
+    <meta name="twitter:description" content="This post is only a modification of the guide written by Bassel Cheaib here Generating the static siteIn order to generate the static site, we&#x27;ll use the Ghost static site generator. With macOS, this tool can be used directly. 1. Install the tool globallyYou can do that by running: sudo" />
+    <meta name="twitter:url" content="https://eHorlyck.github.io/host-ghost-blog-on-github-pages/" />
+    <meta name="twitter:image" content="https://eHorlyck.github.io/content/images/2021/02/10137.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Emil Hørlyck" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="460" />
+    <meta property="og:image:height" content="460" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Emil Hørlyck&#x27;s Blog",
+        "url": "https://eHorlyck.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Emil Hørlyck",
+        "url": "https://eHorlyck.github.io/author/emil/",
+        "sameAs": []
+    },
+    "headline": "How I am hosting my Ghost blog on GitHub Pages",
+    "url": "https://eHorlyck.github.io/host-ghost-blog-on-github-pages/",
+    "datePublished": "2021-02-03T11:23:29.000Z",
+    "dateModified": "2021-02-03T12:18:20.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://eHorlyck.github.io/content/images/2021/02/10137.jpeg",
+        "width": 460,
+        "height": 460
+    },
+    "description": "This post is only a modification of the guide written by Bassel Cheaib here\n[https://dev.to/bassel/hosting-your-ghost-blog-on-github-pages-for-free-53hl]\n\nGenerating the static site\nIn order to generate the static site, we&#x27;ll use the Ghost static site generator\n[https://github.com/Fried-Chicken/ghost-static-site-generator]. With macOS, this\ntool can be used directly.\n\n1. Install the tool globally\nYou can do that by running:\n\nsudo npm install -g ghost-static-site-generator\n\n\n2. Generate the site\n",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://eHorlyck.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.41" />
+    <link rel="alternate" type="application/rss+xml" title="Emil Hørlyck&#x27;s Blog" href="https://eHorlyck.github.io/rss/" />
+</head>
+
+<body class="post-template">
+    <div class="site">
+        <header class="site-header container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="burger hidden-lg hidden-xl"></div>
+            <a class="logo" href="https://eHorlyck.github.io">
+        <img class="logo-image" src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Emil Hørlyck&#x27;s Blog">
+</a>            <div class="sep hidden-xs hidden-sm hidden-sm"></div>
+                <nav class="main-menu hidden-xs hidden-sm hidden-md">
+                    <ul class="nav-list u-plain-list">
+        <li class="menu-item menu-item-home"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/">Home</a></li>
+        <li class="menu-item menu-item-tag"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/tag/getting-started/">Tag</a></li>
+        <li class="menu-item menu-item-author"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/author/ghost/">Author</a></li>
+        <li class="menu-item menu-item-help"><a class="menu-item-link"
+                href="https://ghost.org/docs/">Help</a></li>
+</ul>
+                </nav>
+        </div>
+        <div class="navbar-right">
+            <div class="toggle-track">
+                <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
+                <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
+                <div class="toggle-thumb"></div>
+            </div>
+        </div>
+    </div>
+</header>        <div class="site-content">
+            
+<div class="content-area">
+    <main class="site-main">
+            <article class="post featured single-post">
+                <header class="post-header big-title container medium">
+        <h1 class="post-title">How I am hosting my Ghost blog on GitHub Pages</h1>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-02-03">
+                            Feb 03, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    2 min read
+                </span>
+            </div>
+</header>                    <div class="post-media container large">
+        <div class="u-placeholder horizontal">
+            <a class="post-image-link" href="/host-ghost-blog-on-github-pages/">
+                <img class="post-image lazyload u-object-fit"
+
+                    data-srcset="/content/images/size/w400/2021/02/10137.jpeg 400w, /content/images/size/w750/2021/02/10137.jpeg 750w, /content/images/size/w960/2021/02/10137.jpeg 960w, /content/images/size/w1140/2021/02/10137.jpeg 1140w, /content/images/size/w1920/2021/02/10137.jpeg 1920w"
+                    data-sizes="auto" src="/content/images/size/w960/2021/02/10137.jpeg"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="How I am hosting my Ghost blog on GitHub Pages">
+            </a>
+        </div>
+    </div>
+                <div class="post-content kg-canvas u-text-format">
+                    <p>This post is only a modification of the guide written by Bassel Cheaib <a href="https://dev.to/bassel/hosting-your-ghost-blog-on-github-pages-for-free-53hl">here</a></p><h2 id="generating-the-static-site">Generating the static site</h2><p>In order to generate the static site, we'll use the <a href="https://github.com/Fried-Chicken/ghost-static-site-generator">Ghost static site generator</a>. With macOS, this tool can be used directly.</p><h3 id="1-install-the-tool-globally">1. Install the tool globally</h3><p>You can do that by running:</p><pre><code>sudo npm install -g ghost-static-site-generator
+</code></pre><h3 id="2-generate-the-site">2. Generate the site</h3><ul><li>Create an empty directory of your choice</li><li>Open a terminal in this directory </li><li>Make sure your local ghost installation is running and accessible through the browser. By default it should be running on localhost with the port 2368</li><li>Run the following command:</li></ul><pre><code>gssg --url https://username.github.io
+</code></pre><p>This assumes you'll be pushing the code to your main GitHub site repository named <em>username</em>.github.io, where <em>username</em> is your username (or organization name) on GitHub.</p><p>In case you were using a custom URL or even publishing it to other providers like Netlify, change the URL accordingly. The important thing is that it matches the URL where the site will be deployed.</p><h3 id="3-deploy-it-online">3. Deploy it online</h3><p>By now, you should have a folder named <strong>static</strong> inside the folder you created earlier. This is where the entire static website has been generated. All you have to do is push this code to the repository and wait for it to be deployed. To make this easier and keep everithing in one repo. Go into the repo settings and set Github pages to look into docs/ instead of root/. Then we just rename the directory to docs and it works.</p><p>That's all! Whenever you create new content or update anything, all you need to do is repeat steps 3 and 4.</p><h2 id="how-i-roll-">How I roll!</h2><figure class="kg-card kg-image-card"><img src="https://media.giphy.com/media/l0Hly4V9RdZChBgEE/giphy.gif" class="kg-image" alt="How I Roll"></figure><p>In my case the command to generate the static site and move the files in to the docs directory is:</p><!--kg-card-begin: markdown--><pre><code class="language-bash">cd ~/Development/eHorlyck.github.io &amp;&amp; ghost start &amp;&amp; gssg --url https://eHorlyck.github.io  &amp;&amp; rm -rf Docs &amp;&amp; mv static docs/
+</code></pre>
+<p>Afterwards the local Ghost instance should be stopped before adding files to git and pushing the changes.</p>
+<p>This can be done from the directory using the following command:</p>
+<pre><code class="language-bash">ghost stop &amp;&amp; git add . &amp;&amp; git commit -m &quot;Committing changes to changes to blog using script&quot; &amp;&amp; git push &amp;&amp; say Så er siden opdateret og det lokale miljø genstartes &amp;&amp; ghost start &amp;&amp; say Det lokale miljø er igang igen
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>🚀 And combined 🚀:</p>
+<pre><code class="language-bash">cd ~/Development/eHorlyck.github.io &amp;&amp; ghost start &amp;&amp; gssg --url https://eHorlyck.github.io  &amp;&amp; rm -rf Docs &amp;&amp; mv static docs/ &amp;&amp; ghost stop &amp;&amp; git add . &amp;&amp; git commit -m &quot;Committing changes to changes to blog using script&quot; &amp;&amp; git push &amp;&amp; say Så er siden opdateret og det lokale miljø genstartes &amp;&amp; ghost start &amp;&amp; say Det lokale miljø er igang igen
+</code></pre>
+<!--kg-card-end: markdown-->
+                </div>
+                <div class="container medium">
+                    <div class="share u-hover-wrapper">
+    <a class="share-item share-facebook u-hover-item"
+        href="https://www.facebook.com/sharer.php?u=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/" target="_blank"><i
+            class="icon icon-facebook"></i></a>
+    <a class="share-item share-twitter u-hover-item"
+        href="https://twitter.com/intent/tweet?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&text=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages" target="_blank"><i
+            class="icon icon-twitter"></i></a>
+    <a class="share-item share-pinterest u-hover-item"
+        href="https://pinterest.com/pin/create/button/?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&media=&description=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages"
+        target="_blank" data-pin-do="none"><i class="icon icon-pinterest"></i></a>
+    <a class="share-item share-linkedin u-hover-item"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&title=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages"
+        target="_blank"><i class="icon icon-linkedin"></i></a>
+    <a class="share-item share-reddit u-hover-item"
+        href="https://reddit.com/submit?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&title=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages" target="_blank"><i
+            class="icon icon-reddit"></i></a>
+    <a class="share-item share-tumblr u-hover-item"
+        href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&title=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages"
+        target="_blank"><i class="icon icon-tumblr"></i></a>
+    <a class="share-item share-vk u-hover-item"
+        href="http://vk.com/share.php?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&title=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages" target="_blank"><i
+            class="icon icon-vk"></i></a>
+    <a class="share-item share-pocket u-hover-item" href="https://getpocket.com/edit?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/"
+        target="_blank"><i class="icon icon-pocket"></i></a>
+    <a class="share-item share-telegram u-hover-item"
+        href="https://t.me/share/url?url=https://eHorlyck.github.io/host-ghost-blog-on-github-pages/&text=How%20I%20am%20hosting%20my%20Ghost%20blog%20on%20GitHub%20Pages" target="_blank"><i
+            class="icon icon-telegram"></i></a>
+</div>                        <section class="author">
+        <div class="author-image-placeholder u-placeholder">
+            <img class="author-image lazyload u-object-fit"
+                data-srcset=""
+                src=""
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Emil Hørlyck">
+        </div>
+        <div class="author-wrapper">
+            <header class="author-header">
+                <div class="author-header-wrapper">
+                    <h4 class="author-name">Emil Hørlyck</h4>
+                    <div class="author-social">
+                        <a class="author-social-item author-more"
+                            href=/author/emil/>More posts</a>
+                    </div>
+                </div>
+            </header>
+            <div class="author-bio"></div>
+        </div>
+    </section>
+                </div>
+            </article>
+            <div class="navigation container medium">
+        <div class="navigation-item navigation-previous">
+            <a class="navigation-item-link button-arrow button-arrow-left" href="/software-on-my-mac/">
+                <i class="button-arrow-icon icon icon-arrow-left"></i> Previous Post
+            </a>
+        </div>
+
+</div>                    </main>
+</div>
+        </div>
+        <footer class="site-footer container large">
+    <div class="copyright">
+        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    </div>
+
+    <a class="logo" href="https://eHorlyck.github.io">
+        <img class="logo-image" src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Emil Hørlyck&#x27;s Blog">
+</a>
+    <div class="footer-social">
+            <a class="footer-social-item footer-social-item-facebook" href="https://www.facebook.com/ghost"
+                target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="icon icon-facebook"></i>
+            </a>
+            <a class="footer-social-item footer-social-item-twitter" href="https://twitter.com/ghost"
+                target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="icon icon-twitter"></i>
+            </a>
+        <a class="footer-social-item footer-social-item-rss"
+            href="https://feedly.com/i/subscription/feed/https://eHorlyck.github.io/rss/" target="_blank" rel="noopener noreferrer"
+            aria-label="RSS">
+            <i class="icon icon-rss"></i>
+        </a>
+    </div>
+</footer>    </div>
+
+    <div class="dimmer"></div>
+
+    <div class="off-canvas">
+        <div class="canvas-close">
+            <i class="canvas-icon icon icon-window-close"></i>
+        </div>
+        <div class="mobile-menu"></div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/main.min.js?v=a146846412"></script>
+
+    
+
+    
+</body>
+
+</html>

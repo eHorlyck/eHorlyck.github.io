@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creating a custom theme</title>
+    <link rel="stylesheet" href="/assets/built/screen.css?v=a146846412">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
+
+    <script>
+        if (localStorage.getItem('alto_dark') == 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+    <link rel="canonical" href="https://eHorlyck.github.io/themes/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://eHorlyck.github.io/themes/amp/" />
+    
+    <meta property="og:site_name" content="Emil Hørlyck&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Creating a custom theme" />
+    <meta property="og:description" content="Ghost comes with a beautiful default theme designed for publishers which can easily be adapted for most purposes, or you can build a custom theme to suit your needs." />
+    <meta property="og:url" content="https://eHorlyck.github.io/themes/" />
+    <meta property="og:image" content="https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png" />
+    <meta property="article:published_time" content="2021-02-03T10:20:09.000Z" />
+    <meta property="article:modified_time" content="2021-02-03T10:20:09.000Z" />
+    <meta property="article:tag" content="Getting Started" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta property="article:author" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Creating a custom theme" />
+    <meta name="twitter:description" content="Ghost comes with a beautiful default theme designed for publishers which can easily be adapted for most purposes, or you can build a custom theme to suit your needs." />
+    <meta name="twitter:url" content="https://eHorlyck.github.io/themes/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ghost" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Getting Started" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta name="twitter:creator" content="ghost" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1216" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Emil Hørlyck&#x27;s Blog",
+        "url": "https://eHorlyck.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ghost",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v3.0.0/images/ghost.png",
+            "width": 400,
+            "height": 400
+        },
+        "url": "https://eHorlyck.github.io/author/ghost/",
+        "sameAs": [
+            "https://ghost.org",
+            "https://www.facebook.com/ghost",
+            "https://twitter.com/ghost"
+        ]
+    },
+    "headline": "Creating a custom theme",
+    "url": "https://eHorlyck.github.io/themes/",
+    "datePublished": "2021-02-03T10:20:09.000Z",
+    "dateModified": "2021-02-03T10:20:09.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png",
+        "width": 2000,
+        "height": 1216
+    },
+    "keywords": "Getting Started",
+    "description": "Ghost comes with a beautiful default theme designed for publishers which can easily be adapted for most purposes, or you can build a custom theme to suit your needs.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://eHorlyck.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.41" />
+    <link rel="alternate" type="application/rss+xml" title="Emil Hørlyck&#x27;s Blog" href="https://eHorlyck.github.io/rss/" />
+</head>
+
+<body class="post-template tag-getting-started">
+    <div class="site">
+        <header class="site-header container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="burger hidden-lg hidden-xl"></div>
+            <a class="logo" href="https://eHorlyck.github.io">
+        <img class="logo-image" src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Emil Hørlyck&#x27;s Blog">
+</a>            <div class="sep hidden-xs hidden-sm hidden-sm"></div>
+                <nav class="main-menu hidden-xs hidden-sm hidden-md">
+                    <ul class="nav-list u-plain-list">
+        <li class="menu-item menu-item-home"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/">Home</a></li>
+        <li class="menu-item menu-item-tag"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/tag/getting-started/">Tag</a></li>
+        <li class="menu-item menu-item-author"><a class="menu-item-link"
+                href="https://eHorlyck.github.io/author/ghost/">Author</a></li>
+        <li class="menu-item menu-item-help"><a class="menu-item-link"
+                href="https://ghost.org/docs/">Help</a></li>
+</ul>
+                </nav>
+        </div>
+        <div class="navbar-right">
+            <div class="toggle-track">
+                <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
+                <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
+                <div class="toggle-thumb"></div>
+            </div>
+        </div>
+    </div>
+</header>        <div class="site-content">
+            
+<div class="content-area">
+    <main class="site-main">
+            <article class="post tag-getting-started single-post">
+                <header class="post-header big-title container medium">
+        <h1 class="post-title">Creating a custom theme</h1>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-02-03">
+                            Feb 03, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    2 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-getting-started" href="/tag/getting-started/"
+                                title="Getting Started">Getting Started</a>
+                    </span>
+            </div>
+</header>                    <div class="post-media container large">
+        <div class="u-placeholder horizontal">
+            <a class="post-image-link" href="/themes/">
+                <img class="post-image lazyload u-object-fit"
+
+                    data-srcset="https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png 400w, https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png 750w, https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png 960w, https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png 1140w, https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png 1920w"
+                    data-sizes="auto" src="https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Creating a custom theme">
+            </a>
+        </div>
+    </div>
+                <div class="post-content kg-canvas u-text-format">
+                    <h2 id="ghost-themes">Ghost themes</h2><p>Ghost comes with a default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for most purposes.</p><p>If you need something a little more customised, it's entirely possible to build on top of existing open source themes, or to build your own from scratch. Rather than giving you a few basic settings which act as a poor proxy for code, we just let you write code.</p><h2 id="marketplace">Marketplace</h2><p>There are a huge range of both free and premium pre-built themes which you can download from the <a href="https://ghost.org/marketplace/">Ghost Theme Marketplace</a>:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://static.ghost.org/v3.0.0/images/theme-marketplace.png" class="kg-image" alt="Ghost theme marketplace screenshot"><figcaption>Anyone can write a completely custom Ghost theme with some solid knowledge of HTML and CSS</figcaption></figure><h2 id="theme-development">Theme development</h2><p>Ghost themes are written with a templating language called handlebars, which has a set of dynamic helpers to insert your data into template files. For example: <code>{{author.name}}</code> outputs the name of the current author.</p><p>The best way to learn how to write your own Ghost theme is to have a look at <a href="https://github.com/TryGhost/Casper">the source code for Casper</a>, which is heavily commented and should give you a sense of how everything fits together.<br></p><ul><li><code>default.hbs</code> is the main template file, all contexts will load inside this file unless specifically told to use a different template.</li><li><code>post.hbs</code> is the file used in the context of viewing a post.</li><li><code>index.hbs</code> is the file used in the context of viewing the home page.</li><li>and so on</li></ul><p>We've got <a href="https://ghost.org/docs/themes/">full and extensive theme documentation</a> which outlines every template file, context and helper that you can use. You can also get started with our useful <a href="https://github.com/TryGhost/Starter/">starter theme</a>, which includes the most common foundations and components required to build your own theme.</p><blockquote>If you want to chat with other people making Ghost themes to get any advice or help, there's also a <strong>themes</strong> section on our <a href="https://forum.ghost.org/c/themes">public Ghost forum</a>.</blockquote>
+                </div>
+                <div class="container medium">
+                    <div class="share u-hover-wrapper">
+    <a class="share-item share-facebook u-hover-item"
+        href="https://www.facebook.com/sharer.php?u=https://eHorlyck.github.io/themes/" target="_blank"><i
+            class="icon icon-facebook"></i></a>
+    <a class="share-item share-twitter u-hover-item"
+        href="https://twitter.com/intent/tweet?url=https://eHorlyck.github.io/themes/&text=Creating%20a%20custom%20theme" target="_blank"><i
+            class="icon icon-twitter"></i></a>
+    <a class="share-item share-pinterest u-hover-item"
+        href="https://pinterest.com/pin/create/button/?url=https://eHorlyck.github.io/themes/&media=&description=Creating%20a%20custom%20theme"
+        target="_blank" data-pin-do="none"><i class="icon icon-pinterest"></i></a>
+    <a class="share-item share-linkedin u-hover-item"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=https://eHorlyck.github.io/themes/&title=Creating%20a%20custom%20theme"
+        target="_blank"><i class="icon icon-linkedin"></i></a>
+    <a class="share-item share-reddit u-hover-item"
+        href="https://reddit.com/submit?url=https://eHorlyck.github.io/themes/&title=Creating%20a%20custom%20theme" target="_blank"><i
+            class="icon icon-reddit"></i></a>
+    <a class="share-item share-tumblr u-hover-item"
+        href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://eHorlyck.github.io/themes/&title=Creating%20a%20custom%20theme"
+        target="_blank"><i class="icon icon-tumblr"></i></a>
+    <a class="share-item share-vk u-hover-item"
+        href="http://vk.com/share.php?url=https://eHorlyck.github.io/themes/&title=Creating%20a%20custom%20theme" target="_blank"><i
+            class="icon icon-vk"></i></a>
+    <a class="share-item share-pocket u-hover-item" href="https://getpocket.com/edit?url=https://eHorlyck.github.io/themes/"
+        target="_blank"><i class="icon icon-pocket"></i></a>
+    <a class="share-item share-telegram u-hover-item"
+        href="https://t.me/share/url?url=https://eHorlyck.github.io/themes/&text=Creating%20a%20custom%20theme" target="_blank"><i
+            class="icon icon-telegram"></i></a>
+</div>                        <section class="author">
+        <div class="author-image-placeholder u-placeholder">
+            <img class="author-image lazyload u-object-fit"
+                data-srcset="https://static.ghost.org/v3.0.0/images/ghost.png"
+                src="https://static.ghost.org/v3.0.0/images/ghost.png"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Ghost">
+        </div>
+        <div class="author-wrapper">
+            <header class="author-header">
+                <div class="author-header-wrapper">
+                    <h4 class="author-name">Ghost</h4>
+                    <div class="author-social">
+                            <a class="author-social-item author-website"
+                                href="https://ghost.org" target="_blank">Website</a>
+                            <a class="author-social-item author-facebook"
+                                href="https://www.facebook.com/ghost"
+                                target="_blank">Facebook</a>
+                            <a class="author-social-item author-twitter"
+                                href="https://twitter.com/ghost"
+                                target="_blank">Twitter</a>
+                        <a class="author-social-item author-more"
+                            href=/author/ghost/>More posts</a>
+                    </div>
+                </div>
+            </header>
+            <div class="author-bio">You can delete this user to remove all the welcome posts</div>
+                <div class="author-location">
+                    <i class="author-location-icon icon icon-map-marker"></i>
+                    The Internet
+                </div>
+        </div>
+    </section>
+                </div>
+            </article>
+            <div class="navigation container medium">
+
+        <div class="navigation-item navigation-next">
+            <a class="navigation-item-link button-arrow button-arrow-right" href="/apps-integrations/">
+                Next Post <i class="button-arrow-icon icon icon-arrow-right"></i>
+            </a>
+        </div>
+</div>                <section class="related-posts container medium">
+            <h3 class="related-title"><span class="text">You might also like...</span></h3>
+            <div class="row">
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-getting-started">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="/welcome/">
+                <img class="post-image lazyload u-object-fit"
+
+                    data-srcset="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 400w, https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 750w, https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 960w, https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 1140w, https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 1920w"
+                    data-sizes="auto" src="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Welcome to Ghost">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="/welcome/">Welcome to Ghost</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-02-03">
+                            Feb 03, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    1 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-getting-started" href="/tag/getting-started/"
+                                title="Getting Started">Getting Started</a>
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-getting-started">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="/the-editor/">
+                <img class="post-image lazyload u-object-fit"
+
+                    data-srcset="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 400w, https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 750w, https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 960w, https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 1140w, https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 1920w"
+                    data-sizes="auto" src="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Writing posts with Ghost ✍️">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="/the-editor/">Writing posts with Ghost ✍️</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-02-03">
+                            Feb 03, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    3 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-getting-started" href="/tag/getting-started/"
+                                title="Getting Started">Getting Started</a>
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+                    <div class="col-md-4 related-column">
+                        <article class="post tag-getting-started">
+                                <div class="post-media">
+        <div class="u-placeholder rectangle">
+            <a class="post-image-link" href="/publishing-options/">
+                <img class="post-image lazyload u-object-fit"
+
+                    data-srcset="https://static.ghost.org/v3.0.0/images/publishing-options.png 400w, https://static.ghost.org/v3.0.0/images/publishing-options.png 750w, https://static.ghost.org/v3.0.0/images/publishing-options.png 960w, https://static.ghost.org/v3.0.0/images/publishing-options.png 1140w, https://static.ghost.org/v3.0.0/images/publishing-options.png 1920w"
+                    data-sizes="auto" src="https://static.ghost.org/v3.0.0/images/publishing-options.png"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Publishing options">
+            </a>
+        </div>
+    </div>
+                            <header class="post-header">
+        <h2 class="post-title">
+            <a class="post-title-link" href="/publishing-options/">Publishing options</a>
+        </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="2021-02-03">
+                            Feb 03, 2021
+                    </time>
+                </span>
+                <span class="post-meta-item post-meta-length">
+                    2 min read
+                </span>
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-getting-started" href="/tag/getting-started/"
+                                title="Getting Started">Getting Started</a>
+                    </span>
+            </div>
+</header>                        </article>
+                    </div>
+            </div>
+        </section>
+            </main>
+</div>
+        </div>
+        <footer class="site-footer container large">
+    <div class="copyright">
+        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    </div>
+
+    <a class="logo" href="https://eHorlyck.github.io">
+        <img class="logo-image" src="https://static.ghost.org/v1.0.0/images/ghost-logo.svg" alt="Emil Hørlyck&#x27;s Blog">
+</a>
+    <div class="footer-social">
+            <a class="footer-social-item footer-social-item-facebook" href="https://www.facebook.com/ghost"
+                target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="icon icon-facebook"></i>
+            </a>
+            <a class="footer-social-item footer-social-item-twitter" href="https://twitter.com/ghost"
+                target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="icon icon-twitter"></i>
+            </a>
+        <a class="footer-social-item footer-social-item-rss"
+            href="https://feedly.com/i/subscription/feed/https://eHorlyck.github.io/rss/" target="_blank" rel="noopener noreferrer"
+            aria-label="RSS">
+            <i class="icon icon-rss"></i>
+        </a>
+    </div>
+</footer>    </div>
+
+    <div class="dimmer"></div>
+
+    <div class="off-canvas">
+        <div class="canvas-close">
+            <i class="canvas-icon icon icon-window-close"></i>
+        </div>
+        <div class="mobile-menu"></div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/main.min.js?v=a146846412"></script>
+
+    
+
+    
+</body>
+
+</html>
